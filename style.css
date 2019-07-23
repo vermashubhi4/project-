@@ -1,0 +1,38 @@
+.astrisk{
+  color: crimson;
+}
+
+#header{
+  width: 100%;
+}
+#title{
+  float:left;
+  width:35%;
+}
+#controls{
+  float: right;
+  width:65%;
+  text-align: right;
+}
+
+#afterheader{
+  width: 100%;
+}
+#left{
+  float: left;
+  width:50%;
+  align-self: center;
+}
+#right{
+  float: right;
+  width: 50%;
+  align-content: center;
+
+}
+
+#credentials{
+  align-self: center;
+}
+#loginform{
+  align-content: center;
+}
