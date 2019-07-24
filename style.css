@@ -22,12 +22,15 @@
   float: left;
   width:50%;
   align-self: center;
+  padding-top: 120px;
 }
 #right{
   float: right;
   width: 50%;
   align-content: center;
-
+}
+#formtable{
+  margin-top: 170px;
 }
 
 #credentials{

@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
     <title></title>
-    <script>
+    <script type="text/javascript">
     function validateForm()
       {
           //alert("Passwords Do not match");
-        console.log(document.myform.pass.value);
-        console.log(document.myform.conpass.value);
-        sleep(6000);
-        if (document.myform.pass.value == document.myform.conpass.value )
+          var value1=document.myform.pass.value;
+          var value2=document.myform.conpass.value;
+        console.log(value1);
+        console.log(value2);
+        //sleep(6000);
+        if (value1 == value2 )
         {
           return true;
         }
@@ -37,12 +39,12 @@
     </div>
     <div id="afterheader">
     <div id="left">
-      <img src="tenor.gif" alt="Dancing kitty">
+      <img id="myKitty" src="tenor.gif" alt="Dancing kitty">
     </div>
     <div id="right">
 
       <form name="myform" class="signupform" action="" onsubmit="return validateForm()" method="post" >
-        <table>
+        <table id="formtable">
           <tr>
             <td>NAME<sup class="astrisk">*</sup>:</td>
             <td><input type="text" name="name" required></td>
@@ -53,11 +55,11 @@
           </tr>
           <tr>
             <td>PASSWORD<sup class="astrisk">*</sup> :</td>
-            <td> <input id="pass1" type="text" name="pass" required></td>
+            <td> <input id="pass1" type="password" name="pass" required></td>
           </tr>
           <tr>
             <td>CONFIRM PASSWORD<sup class="astrisk">*</sup> :</td>
-            <td><input id="pass2" type="text" name="conpass" required></td>
+            <td><input id="pass2" type="password" name="conpass" required></td>
           </tr>
         </table>
         <input type="submit" name="signup" value="SIGN UP" >
