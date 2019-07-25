@@ -1,3 +1,9 @@
+<?php
+include 'dbconnect.php';
+session_start();
+if(isset($_SESSION["USERNAME"]))
+ header("Location:main.php");
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
