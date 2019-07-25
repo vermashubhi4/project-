@@ -8,8 +8,8 @@
     function validateForm()
       {
           //alert("Passwords Do not match");
-          var value1=document.myform.pass.value;
-          var value2=document.myform.conpass.value;
+          var value1=document.getElementById('pass1').value;
+          var value2=document.getElementById('pass2').value;
         console.log(value1);
         console.log(value2);
         //sleep(6000);
@@ -31,7 +31,7 @@
         <b><i>CONNECT INC.</i></b>
       </div>
       <div id="controls">
-        <a id="login" href="login.html">LOG IN</a>
+        <a id="login" href="login.php">LOG IN</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
         <a id="signup" href="#">SIGN UP</a>
         &nbsp;&nbsp;
@@ -43,19 +43,23 @@
     </div>
     <div id="right">
 
-      <form name="myform" class="signupform" action="" onsubmit="return validateForm()" method="post" >
+      <form name="myform" class="signupform" action="signup_action.php" onsubmit="return validateForm()" method="post" >
         <table id="formtable">
           <tr>
             <td>NAME<sup class="astrisk">*</sup>:</td>
             <td><input type="text" name="name" required></td>
           </tr>
           <tr>
+            <td>USERNAME<sup class="astrisk">*</sup>:</td>
+            <td><input type="text" name="uname" required></td>
+          </tr>
+          <tr>
             <td>EMAIL<sup class="astrisk">*</sup> :</td>
-            <td><input type="text" name="email" required></td>
+            <td><input type="email" name="email" required></td>
           </tr>
           <tr>
             <td>PASSWORD<sup class="astrisk">*</sup> :</td>
-            <td> <input id="pass1" type="password" name="pass" required></td>
+            <td> <input id="pass1" type="password" pattern=".{4,}"name="pass" required></td>
           </tr>
           <tr>
             <td>CONFIRM PASSWORD<sup class="astrisk">*</sup> :</td>
@@ -66,6 +70,14 @@
       </form>
     </div>
   </div>
-
+<?php
+  if(isset($msg)){
+ ?>
+<script type="text/javascript">
+alert("<?php echo $_GET['$msg'] ?>");
+</script>
+ <?php
+  }
+  ?>
   </body>
 </html>

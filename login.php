@@ -13,19 +13,21 @@
       <div id="controls">
         <a id="login" href="#">LOG IN</a>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a id="signup" href="index.html">SIGN UP</a>
+        <a id="signup" href="index.php">SIGN UP</a>
         &nbsp;&nbsp;
       </div>
     </div>
     <div id="credentials">
-      <form class="loginform" action="main.html" method="post">
+      <form class="loginform" action="login_action.php" method="post">
       <table align="center">
       <tr>
-         <td>NAME: </td>
-         <td><input type="text" name="name" required></td>
+        <tr>
+          <td>USERNAME<sup class="astrisk">*</sup>:</td>
+          <td><input type="text" name="uname" required></td>
+        </tr>
       </tr>
       <tr>
-         <td>PASSWORD:</td>
+         <td>PASSWORD<sup class="astrisk">*</sup>:</td>
          <td><input type="password" name="pass" required></td>
      </tr>
       </table>
